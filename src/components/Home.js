@@ -28,6 +28,17 @@ const Container = styled.div`
   position: relative;
 `;
 
+const Footer = styled.h2`
+  font-size: 1rem;
+  font-weight: 100;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  position: absolute;
+  top: 95%;
+  left: 90%;
+`;
+
+
 // Estilos del título
 const Title = styled.h1`
   font-size: 5rem;
@@ -168,6 +179,8 @@ function Home() {
           <img src="/images/instagramIcon.png" alt="Instagram" width="50px" />
         </a>
       </Container>
+      <Footer>page coded by me,,, heheh</Footer>
+      
     </>
   );
 }

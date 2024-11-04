@@ -54,13 +54,15 @@ const VideoContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2%;
-  margin-top: 10%; /* Espacio extra debajo del título y subtítulo */
-  height: 40vw;
-`;
-
-const VideoPlayer = styled.video`
+  height: auto;
   width: 100%;
   height: 100%;
+`;
+
+// Reproductor de video con proporción de 9:16
+const VideoPlayer = styled.video`
+  width: 100%; /* Ajuste para que el video ocupe el 45% del ancho del contenedor */
+  aspect-ratio: 16 / 9; /* Relación de aspecto de 1080x1920 */
   border-radius: 10px;
 `;
 
@@ -80,7 +82,7 @@ const DescriptionContainer = styled.div`
 const ProjectTitle = styled.h1`
   font-size: 2.5vw;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 `;
 
 // Texto de la descripción

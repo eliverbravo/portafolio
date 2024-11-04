@@ -47,22 +47,24 @@ const Subtitle = styled.h2`
   top: 13%;
   left: 8%;
 `;
-
 // Contenedor para el reproductor de video (parte izquierda)
 const VideoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2%;
-  margin-top: 10%; /* Espacio extra debajo del título y subtítulo */
-  height: 40vw;
-`;
-
-const VideoPlayer = styled.video`
+\  height: auto;
   width: 100%;
   height: 100%;
+`;
+
+// Reproductor de video con proporción de 9:16
+const VideoPlayer = styled.video`
+  width: 100%; /* Ajuste para que el video ocupe el 45% del ancho del contenedor */
+  aspect-ratio: 16 / 9; /* Relación de aspecto de 1080x1920 */
   border-radius: 10px;
 `;
+
 
 // Contenedor para la descripción (parte derecha)
 const DescriptionContainer = styled.div`

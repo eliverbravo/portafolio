@@ -10,7 +10,7 @@ import Design from './components/design.js';
 import Photography1 from './components/PhotographyProjects/Photography1.js';
 import VideoProduction from './components/VideoProduction.js';
 import VideoProd1 from './components/VideoProductionProjects/VideoProd1.js';
-import VideoProd2 from './components/VideoProductionProjects/VideoProd1.js';
+import VideoProd2 from './components/VideoProductionProjects/VideoProd2.js';
 import Design1 from './components/DesignProjects/design1.js';
 import Design2 from './components/DesignProjects/design2.js';
 import Design3 from './components/DesignProjects/design3.js';
