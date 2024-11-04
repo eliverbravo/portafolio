@@ -124,7 +124,7 @@ function VideoProd1() {
         {/* Reproductor de video */}
         <VideoContainer>
           <VideoPlayer controls>
-            <source src="images/VideoProjects/VideoProject1.mp4" type="video/mp4" />
+            <source src="/images/VideoProjects/VideoProject1.mp4" type="video/mp4" />
             Tu navegador no soporta el elemento de video.
           </VideoPlayer>
         </VideoContainer>
