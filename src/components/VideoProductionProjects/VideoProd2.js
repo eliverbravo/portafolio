@@ -53,7 +53,8 @@ const VideoContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2%;
-\  height: auto;
+  margin-top: 10%; /* Espacio extra debajo del título y subtítulo */
+  height: auto;
   width: 100%;
   height: 100%;
 `;
