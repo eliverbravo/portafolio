@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 
@@ -16,10 +16,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// Contenedor principal con grid para el video y la descripción
+// Contenedor principal con grid para las imágenes y la descripción
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%; /* Dos columnas: una para el video y otra para el texto */
+  grid-template-columns: 50% 50%; /* Dos columnas: una para imágenes y otra para el texto */
   gap: 2%; /* Espaciado entre las columnas */
   height: 100vh;
   padding: 3%;
@@ -48,20 +48,48 @@ const Subtitle = styled.h2`
   left: 8%;
 `;
 
-// Contenedor para el reproductor de video (parte izquierda)
-const VideoContainer = styled.div`
+// Contenedor para la imagen activa del slideshow
+const ImageContainer = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 2%;
-  margin-top: 10%; /* Espacio extra debajo del título y subtítulo */
-  height: 40vw;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 35vw;
+  top:17%;
 `;
 
-const VideoPlayer = styled.video`
+// Botones de navegación para el slideshow
+const NavButton = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #84b572;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+`;
+
+const PrevButton = styled(NavButton)`
+  left: 0;
+`;
+
+const NextButton = styled(NavButton)`
+  right: 0;
+`;
+
+// Estilos para la imagen activa
+const Image = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  object-fit: contain;
 `;
 
 // Contenedor para la descripción (parte derecha)
@@ -90,12 +118,6 @@ const ProjectDescription = styled.p`
   margin-bottom: 2rem;
 `;
 
-const ProjectDetails = styled.p`
-  font-size: 1.vw;
-  line-height: 1.5;
-  
-`;
-
 const ReturnButton = styled.button`
   padding: 0.5vw 1vw;
   font-size: 1vw;
@@ -105,13 +127,31 @@ const ReturnButton = styled.button`
   color: #84b572;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top:3%;
+  margin-top: 3%;
   &:hover {
     background-color: #76a865;
   }
 `;
 
-function VideoProd1() {
+function Design3() {
+  const images = [
+    "/images/Design/Design3/webz1.jpg",
+    "/images/Design/Design3/webz2.jpg",
+    
+  ];
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const goToPreviousSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <>
       <GlobalStyle />
@@ -119,34 +159,25 @@ function VideoProd1() {
         <Title>Eliver Bravo</Title>
         <Subtitle>Digital Media Engineer</Subtitle>
         
-        {/* Reproductor de video */}
-        <VideoContainer>
-          <VideoPlayer controls>
-            <source src="images/VideoProjects/VideoProject1.mp4" type="video/mp4" />
-            Tu navegador no soporta el elemento de video.
-          </VideoPlayer>
-        </VideoContainer>
+        {/* Slideshow de imágenes */}
+        <ImageContainer>
+          <PrevButton onClick={goToPreviousSlide}>{"<"}</PrevButton>
+          <Image src={images[currentIndex]} alt={`Foto ${currentIndex + 1}`} />
+          <NextButton onClick={goToNextSlide}>{">"}</NextButton>
+        </ImageContainer>
 
         {/* Contenedor de la descripción */}
         <DescriptionContainer>
-          <ProjectTitle>Just Dance Remake (2023)</ProjectTitle>
+          <ProjectTitle>Webzters (2023)</ProjectTitle>
           <ProjectDescription>
-            Just Dance lookalike using digital 3D environments and motion graphics.
+            Design for Social Media.
           </ProjectDescription>
-          <ProjectDetails>
-            Direction, production and editing: Eliver Bravo, Carlos Penilla, Armando Martinez.
-          </ProjectDetails>
-          <ProjectDetails>
-            Digital Environments: Ayala Mora, Eliver Bravo, Carlos de la Trinidad, Andre Lopez.
-          </ProjectDetails>
-          <ProjectDetails>
-            Motion Graphics: Ayala Mora, Eliver Bravo, Carlos de la Trinidad, Carlos Penilla, Armando Martinez.
-          </ProjectDetails>         
-          <Link to="/VideoProduction">
+          
+          <Link to="/Design">
             <ReturnButton>Return Home</ReturnButton>
           </Link>
         </DescriptionContainer>
-        
+
         {/* Icono de Instagram */}
         <a href="https://www.instagram.com/h0nniex/" style={{ position: 'absolute', top: '2%', right: '2%' }}>
           <img src="/images/instagramIcon.png" alt="Instagram" width="40px" />
@@ -156,4 +187,4 @@ function VideoProd1() {
   );
 }
 
-export default VideoProd1;
+export default Design3;

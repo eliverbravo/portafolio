@@ -56,8 +56,8 @@ const Subtitle = styled.h2`
   color: white;
   font-family: 'Arial', sans-serif;
   position: absolute;
-  top: 11%;
-  left: 7%;
+  top: 12%;
+  left: 9%;
 `;
 
 // Estilos del contenedor para organizar las fotos (grid)
@@ -119,24 +119,24 @@ function Design() {
 
         {/* Contenedor de fotos clickeables en grid */}
         <PhotoGrid>
-          <PhotoLink to="/Photography1">
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 1" />
+          <PhotoLink to="/design1">
+            <img src="/images/Design/Design1/dialz1.jpg" alt="Foto 1" />
           </PhotoLink>
-          <PhotoLink to="/page2">
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 2" />
+          <PhotoLink to="/design2">
+            <img src="/images/Design/Design2/psa1.png" alt="Foto 2" />
           </PhotoLink>
-          <PhotoLink to="/page3">
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 3" />
+          <PhotoLink to="/design3">
+            <img src="/images/Design/Design3/webz1.jpg" alt="Foto 3" />
           </PhotoLink>
-          <PhotoLink to="/page4">
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 4" />
+          <PhotoLink to="/design4">
+            <img src="/images/Design/Design4/alamo4.jpeg" alt="Foto 4" />
           </PhotoLink>
-          <PhotoLink to="/page5">
+          {/* <PhotoLink to="/design5">
             <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 5" />
           </PhotoLink>
-          <PhotoLink to="/page6">
+          <PhotoLink to="/design6">
             <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 6" />
-          </PhotoLink>
+          </PhotoLink> */}
         </PhotoGrid>
 
         {/* Botón para volver a la página de inicio */}

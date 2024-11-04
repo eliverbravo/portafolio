@@ -111,7 +111,7 @@ const ReturnButton = styled.button`
   }
 `;
 
-function VideoProd1() {
+function VideoProd2() {
   return (
     <>
       <GlobalStyle />
@@ -122,26 +122,20 @@ function VideoProd1() {
         {/* Reproductor de video */}
         <VideoContainer>
           <VideoPlayer controls>
-            <source src="images/VideoProjects/VideoProject1.mp4" type="video/mp4" />
+            <source src="images/VideoProjects/VideoProject2.mp4" type="video/mp4" />
             Tu navegador no soporta el elemento de video.
           </VideoPlayer>
         </VideoContainer>
 
         {/* Contenedor de la descripción */}
         <DescriptionContainer>
-          <ProjectTitle>Just Dance Remake (2023)</ProjectTitle>
+          <ProjectTitle> Unreal Photoshoot BTS (2023)</ProjectTitle>
           <ProjectDescription>
-            Just Dance lookalike using digital 3D environments and motion graphics.
+            Behind the Scenes video for Unreal Clothing. 
           </ProjectDescription>
           <ProjectDetails>
-            Direction, production and editing: Eliver Bravo, Carlos Penilla, Armando Martinez.
+            Direction, production, photography and editing by me
           </ProjectDetails>
-          <ProjectDetails>
-            Digital Environments: Ayala Mora, Eliver Bravo, Carlos de la Trinidad, Andre Lopez.
-          </ProjectDetails>
-          <ProjectDetails>
-            Motion Graphics: Ayala Mora, Eliver Bravo, Carlos de la Trinidad, Carlos Penilla, Armando Martinez.
-          </ProjectDetails>         
           <Link to="/VideoProduction">
             <ReturnButton>Return Home</ReturnButton>
           </Link>
@@ -156,4 +150,4 @@ function VideoProd1() {
   );
 }
 
-export default VideoProd1;
+export default VideoProd2;

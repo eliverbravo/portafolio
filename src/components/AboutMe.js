@@ -22,7 +22,7 @@ const Title = styled.h1`
   left: 3%;
 `;
 
-// Estilos del subtítulo
+// Estilos del subtítulonpm
 const Subtitle = styled.h2`
   font-size: 1.5rem;
   font-weight: 100;
@@ -111,7 +111,16 @@ function AboutMe() {
         <TextContainer>
           <WelcomeTitle>Hi, I'm Eliver!</WelcomeTitle>
           <Description>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          I'm a digital engineer based in Tj/San Diego, lover of all things digital and all things creative. 
+          I’ve always been a very indecisive person, when I say I love everything and anything, 
+          I really do mean that. To me, beauty is hidden everywhere, especially in mundane things.
+          I try to reflect that in my work. My love for creating may be blind, but it is real and 
+          is my drive. My work can be messy and it is everywhere, just like my mind. I always thought 
+          I needed to be focused on ONE thing, but overtime I’ve come to peace with just creating. 
+          That’s where Digital Media saved me. Whatever it is, wether it's a webpage or a simple video edit, or some 
+          videography, or a 3D render I spent hours trying to get right. However it is, you can make it beautiful, 
+          and that’s okay. 
+      
           </Description>
           
           {/* Botón de regreso */}

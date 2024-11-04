@@ -1,28 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importar Link
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
-// Estilos del contenedor principal
-background-color: #84b572; /* Color verde de fondo */
+  background-color: #84b572; /* Color verde de fondo */
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
+  justify-content: center;
   position: relative;
 `;
 
-
-// Estilos del título
 const Title = styled.h1`
-  font-size: 5rem;
+  font-size: 5.5vw; /* Escalado dinámico con viewport */
   font-weight: 200;
   color: white;
   font-family: 'Pinyon Script', cursive;
   position: absolute;
-  top: -2%;
-  left: 5%;
+  top: -4%;
+  left: 3%;
 `;
 
 // Estilos del subtítulo
@@ -36,46 +33,96 @@ const Subtitle = styled.h2`
   left: 8%;
 `;
 
-// Estilos para el contenedor de imágenes (como el tablero)
-const Board = styled.div`
-  width:10%;
-  height: 10%;
-  left: 30%;
-  background-color: #84b572;
-  background-size: cover;  
-  background-repeat: no-repeat;  
-  padding: 18%;
+// Contenedor para la tarjeta con el borde
+const BorderedContainer = styled.div`
+  width: 60%;
+  height: 50%;
+  padding: 2rem;
+  border: 2px solid white; /* Borde blanco para el rectángulo */
+  border-radius: 15px; /* Borde redondeado */
   display: flex;
-  flex-wrap: wrap;
-  justify-content: Left;
-  align-items: Left;
+  align-items: center;
+  gap: 1.5rem;
   position: relative;
 `;
 
-const ProjectImage = styled.div`
-  width: 100px;
-  height: auto;
-  margin: 5%;
-  align-items: left;
+// Contenedor de la imagen de perfil
+const ProfileImage = styled.img`
+  width: 50%; /* Ajustar el tamaño del GIF aquí si es necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover;
 `;
+
+// Contenedor de texto dentro de la tarjeta
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+`;
+
+// Título de bienvenida
+const WelcomeTitle = styled.h2`
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+`;
+
+// Texto de descripción
+const Description = styled.p`
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+`;
+
+// Botón para regresar a la página de inicio
+const ReturnButton = styled(Link)`
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #84b572;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  width: 20%;
+  
+  &:hover {
+    background-color: #76a865;
+  }
+`;
+
 function Contact() {
   return (
     <Container>
       <Title>Eliver Bravo</Title>
-        <Subtitle>Digital Media Engineer</Subtitle>
-          <Board>
-            <ProjectImage>Hola</ProjectImage>
-        <div>
+      <Subtitle>Digital Media Engineer</Subtitle>
       
-      <Link to="/">
-        <button>Return Home</button>
-      </Link>
+      {/* Contenedor con borde */}
+      <BorderedContainer>
+        {/* Imagen de perfil reemplazada por un GIF */}
+        <ProfileImage src="https://media.tenor.com/g-4YpI4yeK4AAAAM/ascii-cats.gif" alt="Eliver Bravo" />
+        
+        {/* Contenedor de texto de presentación */}
+        <TextContainer>
+          <WelcomeTitle>For inquires, contact me at</WelcomeTitle>
+          <Description>
+            eliverbravo@gmail.com
+          </Description>
           
-    </div>
-    </Board>      
-  
+          {/* Botón de regreso */}
+          <ReturnButton to="/">Return Home</ReturnButton>
+        </TextContainer>
+      </BorderedContainer>
+
+      {/* Icono de Instagram en la esquina superior derecha */}
+      <a href="https://www.instagram.com/h0nniex/" style={{ position: 'absolute', top: '2%', right: '2%' }}>
+        <img src="/images/instagramIcon.png" alt="Instagram" width="4%" />
+      </a>
     </Container>
-    
   );
 }
 

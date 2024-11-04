@@ -57,7 +57,7 @@ const Subtitle = styled.h2`
   font-family: 'Arial', sans-serif;
   position: absolute;
   top: 13%;
-  left: 7%;
+  left: 6%;
 `;
 
 // Estilos del contenedor para organizar las fotos (grid)
@@ -122,7 +122,7 @@ function Photography() {
           <PhotoLink to="/Photography1">
             <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 1" />
           </PhotoLink>
-          <PhotoLink to="/page2">
+          {/* <PhotoLink to="/page2">
             <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 2" />
           </PhotoLink>
           <PhotoLink to="/page3">
@@ -136,7 +136,7 @@ function Photography() {
           </PhotoLink>
           <PhotoLink to="/page6">
             <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 6" />
-          </PhotoLink>
+          </PhotoLink> */}
         </PhotoGrid>
 
         {/* Botón para volver a la página de inicio */}

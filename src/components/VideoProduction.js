@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
-import VideoProd1 from './VideoProductionProjects/VideoProd1.js';
 
-// Reseteo global para eliminar márgenes y padding que podrían causar scroll
+// Reseteo global de márgenes y padding para asegurar que nada sobresalga de los límites de la pantalla
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -37,7 +36,7 @@ const Title = styled.h1`
   font-family: 'Pinyon Script', cursive;
   position: absolute;
   top: 2%;
-  left: 5%;
+  left: 3%;
 `;
 
 const MenuTitle = styled.h2`
@@ -47,7 +46,7 @@ const MenuTitle = styled.h2`
   font-family: 'Arial', sans-serif;
   position: absolute;
   top: 12%;
-  left: 35%;
+  left: 30%;
 `;
 
 // Estilos del subtítulo
@@ -57,8 +56,8 @@ const Subtitle = styled.h2`
   color: white;
   font-family: 'Arial', sans-serif;
   position: absolute;
-  top: 11%;
-  left: 7%;
+  top: 13%;
+  left: 6%;
 `;
 
 // Estilos del contenedor para organizar las fotos (grid)
@@ -121,12 +120,12 @@ function VideoProduction() {
         {/* Contenedor de fotos clickeables en grid */}
         <PhotoGrid>
           <PhotoLink to="/VideoProd1">
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="VideoProd1" />
+            <img src="/images/VideoProjects/videocover1.jpg" alt="Foto 1" />
           </PhotoLink>
-          <PhotoLink to="/page2">
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 2" />
+          <PhotoLink to="/VideoProd2">
+          <img src="/images/VideoProjects/videocover2.jpg" alt="Foto 2" />
           </PhotoLink>
-          <PhotoLink to="/page3">
+          {/* <PhotoLink to="/page3">
             <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 3" />
           </PhotoLink>
           <PhotoLink to="/page4">
@@ -137,7 +136,7 @@ function VideoProduction() {
           </PhotoLink>
           <PhotoLink to="/page6">
             <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 6" />
-          </PhotoLink>
+          </PhotoLink>  */}
         </PhotoGrid>
 
         {/* Botón para volver a la página de inicio */}

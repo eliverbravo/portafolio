@@ -16,10 +16,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// Contenedor principal con grid para el video y la descripción
+// Contenedor principal con grid para las imágenes y la descripción
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%; /* Dos columnas: una para el video y otra para el texto */
+  grid-template-columns: 50% 50%; /* Dos columnas: una para imágenes y otra para el texto */
   gap: 2%; /* Espaciado entre las columnas */
   height: 100vh;
   padding: 3%;
@@ -48,20 +48,30 @@ const Subtitle = styled.h2`
   left: 8%;
 `;
 
-// Contenedor para el reproductor de video (parte izquierda)
-const VideoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// Contenedor para las imágenes (parte izquierda)
+const ImageGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas para las imágenes */
+  grid-template-rows: repeat(3, 1fr); /* Tres filas */
+  gap: 1vw; /* Espaciado entre las imágenes */
   padding: 2%;
   margin-top: 10%; /* Espacio extra debajo del título y subtítulo */
   height: 40vw;
 `;
 
-const VideoPlayer = styled.video`
+// Estilos para cada imagen del menú
+const MenuItem = styled(Link)`
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    }
+  }
 `;
 
 // Contenedor para la descripción (parte derecha)
@@ -90,12 +100,6 @@ const ProjectDescription = styled.p`
   margin-bottom: 2rem;
 `;
 
-const ProjectDetails = styled.p`
-  font-size: 1.vw;
-  line-height: 1.5;
-  
-`;
-
 const ReturnButton = styled.button`
   padding: 0.5vw 1vw;
   font-size: 1vw;
@@ -111,7 +115,7 @@ const ReturnButton = styled.button`
   }
 `;
 
-function VideoProd1() {
+function Design5() {
   return (
     <>
       <GlobalStyle />
@@ -119,30 +123,37 @@ function VideoProd1() {
         <Title>Eliver Bravo</Title>
         <Subtitle>Digital Media Engineer</Subtitle>
         
-        {/* Reproductor de video */}
-        <VideoContainer>
-          <VideoPlayer controls>
-            <source src="images/VideoProjects/VideoProject1.mp4" type="video/mp4" />
-            Tu navegador no soporta el elemento de video.
-          </VideoPlayer>
-        </VideoContainer>
+        {/* Grid de imágenes */}
+        <ImageGrid>
+          <MenuItem>
+            <img src="/images/Design/Design1/dialz1.jpg" alt="Foto 1" />
+          </MenuItem>
+          <MenuItem>
+            <img src="/images/Design/Design1/dialz3.jpg" alt="Foto 2" />
+          </MenuItem>
+          <MenuItem>
+            <img src="/images/Design/Design1/dialz4.jpg" alt="Foto 3" />
+          </MenuItem>
+          <MenuItem>
+            <img src="/images/Design/Design1/dialz2.jpg" alt="Foto 4" />
+          </MenuItem>
+          <MenuItem>
+            <img src="/images/Design/Design1/dialz5.jpg" alt="Foto 5" />
+          </MenuItem>
+          <MenuItem>
+            <img src="/images/Design/Design1/dialz6.jpg" alt="Foto 6" />
+          </MenuItem>
+        </ImageGrid>
 
         {/* Contenedor de la descripción */}
         <DescriptionContainer>
-          <ProjectTitle>Just Dance Remake (2023)</ProjectTitle>
+          <ProjectTitle>Frio Mar (2023)</ProjectTitle>
           <ProjectDescription>
-            Just Dance lookalike using digital 3D environments and motion graphics.
+          Photo session at beach using mirrors as a visual element. 
           </ProjectDescription>
-          <ProjectDetails>
-            Direction, production and editing: Eliver Bravo, Carlos Penilla, Armando Martinez.
-          </ProjectDetails>
-          <ProjectDetails>
-            Digital Environments: Ayala Mora, Eliver Bravo, Carlos de la Trinidad, Andre Lopez.
-          </ProjectDetails>
-          <ProjectDetails>
-            Motion Graphics: Ayala Mora, Eliver Bravo, Carlos de la Trinidad, Carlos Penilla, Armando Martinez.
-          </ProjectDetails>         
-          <Link to="/VideoProduction">
+          Direction, photography, production and coloring done by me.
+          
+          <Link to="/Design">
             <ReturnButton>Return Home</ReturnButton>
           </Link>
         </DescriptionContainer>
@@ -156,4 +167,4 @@ function VideoProd1() {
   );
 }
 
-export default VideoProd1;
+export default Design5;

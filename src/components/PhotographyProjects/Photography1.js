@@ -70,9 +70,6 @@ const MenuItem = styled(Link)`
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.1);
     }
   }
 `;
@@ -112,7 +109,7 @@ const ReturnButton = styled.button`
   color: #84b572;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
+  margin-top:3%;
   &:hover {
     background-color: #76a865;
   }
@@ -132,28 +129,30 @@ function Photography1() {
             <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 1" />
           </MenuItem>
           <MenuItem>
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 2" />
+            <img src="/images/Photography/FrioMar/FrioMar3.jpg" alt="Foto 2" />
           </MenuItem>
           <MenuItem>
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 3" />
+            <img src="/images/Photography/FrioMar/FrioMar4.jpg" alt="Foto 3" />
           </MenuItem>
           <MenuItem>
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 4" />
+            <img src="/images/Photography/FrioMar/FrioMar2.jpg" alt="Foto 4" />
           </MenuItem>
           <MenuItem>
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 5" />
+            <img src="/images/Photography/FrioMar/FrioMar5.jpg" alt="Foto 5" />
           </MenuItem>
           <MenuItem>
-            <img src="/images/Photography/FrioMar/FrioMar1.jpg" alt="Foto 6" />
+            <img src="/images/Photography/FrioMar/FrioMar6.jpg" alt="Foto 6" />
           </MenuItem>
         </ImageGrid>
 
         {/* Contenedor de la descripción */}
         <DescriptionContainer>
-          <ProjectTitle>Frio Mar</ProjectTitle>
+          <ProjectTitle>Frio Mar (2023)</ProjectTitle>
           <ProjectDescription>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          Photo session at beach using mirrors as a visual element. 
           </ProjectDescription>
+          Direction, photography, production and coloring done by me.
+          
           <Link to="/Photography">
             <ReturnButton>Return Home</ReturnButton>
           </Link>
